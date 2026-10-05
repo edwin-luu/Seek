@@ -1,6 +1,6 @@
 #pragma once
 
-// Little helpers for seek's on-disk index format. Integers are little-endian; most numbers are
+// Little helpers for Seek's on-disk index format. Integers are little-endian; most numbers are
 // written as LEB128 varints (7 bits per byte, high bit = "more bytes follow"), so the small
 // numbers that dominate an index (position gaps, counts) take one byte instead of four or eight.
 

@@ -23,7 +23,7 @@ struct ExtractedText {
     int page_at(std::size_t offset) const;
 };
 
-// True for file types seek knows how to read: .txt, .md, .markdown, .pdf (case-insensitive).
+// True for file types Seek knows how to read: .txt, .md, .markdown, .pdf (case-insensitive).
 bool is_supported(const std::filesystem::path& path);
 
 ExtractedText extract_text(const std::filesystem::path& path);

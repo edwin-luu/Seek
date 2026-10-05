@@ -1,4 +1,4 @@
-// seek: instant ranked search over your notes and PDFs.
+// Seek: instant ranked search over your notes and PDFs.
 
 #include <unistd.h>
 
@@ -27,7 +27,7 @@ using Clock = std::chrono::steady_clock;
 
 namespace {
 
-constexpr std::string_view kUsage = R"(seek - instant ranked search over your notes and PDFs
+constexpr std::string_view kUsage = R"(Seek - instant ranked search over your notes and PDFs
 
 Usage:
   seek index [DIR...]      Add folders to the index and read their files.
@@ -419,7 +419,7 @@ int main(int argc, char** argv) {
     try {
         switch (options.command) {
             case Command::Help: std::cout << kUsage; return 0;
-            case Command::Version: std::cout << "seek " << SEEK_VERSION << '\n'; return 0;
+            case Command::Version: std::cout << "Seek " << SEEK_VERSION << '\n'; return 0;
             case Command::Index: return run_index(options, style);
             case Command::Status: return run_status(options, style);
             case Command::Forget: return run_forget(options, style);

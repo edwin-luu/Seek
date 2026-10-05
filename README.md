@@ -1,4 +1,4 @@
-# seek
+# Seek
 
 **Instant, ranked search over your notes and PDFs, on your own machine.**
 
@@ -19,7 +19,7 @@ Top 2 of 14 matches - ranked 58 files in 0.02 ms
 
 You remember reading something ("which lecture explained the Kalman filter?") but not where.
 `grep` can't look inside PDFs and lists matches in whatever order it finds them. Uploading
-everything to a chatbot is slow and sends your files to someone else's server. seek reads your
+everything to a chatbot is slow and sends your files to someone else's server. Seek reads your
 files once, builds an index, and then answers in milliseconds, best match first, with the
 page number and a highlighted snippet. Nothing leaves your computer.
 
@@ -65,7 +65,7 @@ edited, and deleted files**, and when nothing changed that check takes a few mil
 Reads `.txt`, `.md`, `.markdown`, and `.pdf`. Skips hidden files and folders (`.git`, `.cache`,
 ...) and `node_modules`. The index is stored at `~/.cache/seek/index.bin` (override with
 `--index FILE` or `SEEK_INDEX`). Exit status is 0 when something matched, 1 when nothing did, and
-2 on errors, so seek works in scripts like `grep` does. Colors turn off when output isn't a
+2 on errors, so Seek works in scripts like `grep` does. Colors turn off when output isn't a
 terminal or `NO_COLOR` is set.
 
 ## How it works
@@ -125,7 +125,7 @@ damaged file produces a clear error instead of a crash. The output is determinis
 index always saves to the same bytes.
 
 **Snippets come from the original file.** The index stores words and positions, not your text.
-For the top results only, seek re-reads the file, finds the window with the most distinct query
+For the top results only, Seek re-reads the file, finds the window with the most distinct query
 words, and highlights them. That keeps the index small (about 6 KB per indexed file in practice).
 Control characters are stripped from snippets, so a file can't inject terminal escape codes into
 your screen.

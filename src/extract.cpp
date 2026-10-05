@@ -27,7 +27,7 @@ std::string lowercase_extension(const fs::path& path) {
 }
 
 // Poppler prints parser warnings for slightly malformed PDFs straight to stderr, which would
-// garble seek's output. We report failures ourselves, so mute it once per process.
+// garble Seek's output. We report failures ourselves, so mute it once per process.
 void silence_poppler() {
     static std::once_flag once;
     std::call_once(once, [] { poppler::set_debug_error_function([](const std::string&, void*) {}, nullptr); });
